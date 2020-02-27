@@ -1,12 +1,15 @@
 ---
 title: "Efficient & Parallel Programming in R"
-author: "Andrew Redd @statredd"
+author: |
+  Andrew Redd @statredd
+  https://github.com/halpo/RUG-FEB2020
 date: "Salt Lake City R Users Group, February 27, 2020"
 output: 
     ioslides_presentation:
         incremental: false
         widescreen: true
         logo: images/slcrug_hex.png
+        toc: true
 ---
 ```{css, echo=FALSE}
 slide img {
@@ -455,7 +458,10 @@ This is relevant to know for CHPC.
 
 ## Timing for four
 ```{r include=FALSE}
+unlink("Simulation 2/parameters.rds")
 unlink("Simulation 2/*.rds")
+unlink("Simulation 2/*.err")
+unlink("Simulation 2/*.out")
 ```
 
 ```{r, root.dir = "Simulation 2"}
